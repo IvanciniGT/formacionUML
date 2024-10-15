@@ -1,9 +1,10 @@
 # Diagrama de casos de uso
 
-```mermaid
-graph TD;
-A-->B;
-A-->C;
-B-->D;
-C-->D;
+```plantuml
+@startuml
+
+    :Usuario: as U
+    U --> (Sacar dinero del cajero)
+
+@enduml
 ```
