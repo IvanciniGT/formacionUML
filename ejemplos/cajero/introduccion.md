@@ -13,6 +13,7 @@ Queremos modelar un cajero.. En especial la operación de sacar dinero.
   - Servidor central del banco
 - Casos de uso: Qué puede hacer el cajero?
   - Usuario/cliente:
+    - Validar tarjeta
     - sacar dinero   (relacionado con: consultar el dinero disponible en el cajero)
     - ingresar dinero
     - consultar saldo
@@ -37,7 +38,7 @@ Qué requisitos surgen de este caso de uso?
   Si hay dinero en el cajero                                            900 (depende de la estructura del saldo del cajero... Cuántos billetes hay de cada tipo)
   Si el cajero está operativo  
 
-  Para definir casos de uso, nos ayuda mucho seguir una estructura de ejemplificación mediante 3 conceptos: GIVEN, WHEN, THEN (DADO, CUANDO, ENTONCES)
+  Para definir casos de uso, nos ayuda mucho seguir una estructura de ejemplificación mediante 3 conceptos: GIVEN, WHEN, THEN (DADO, CUANDO, ENTONCES): Escenarios de USO
 
   RF01: Sacar dinero (HAPPY PATH)
 

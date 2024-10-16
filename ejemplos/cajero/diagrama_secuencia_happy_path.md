@@ -93,6 +93,7 @@ sequenceDiagram
                 note right of C:    Bloqueo de Tarjeta del PIN
             opt               Si el PIN no es válido
                 C -->>- U:      Retener tarjeta
+                C -) S: Bloquear tarjeta (asinc)
             end
         end
     end

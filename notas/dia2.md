@@ -80,3 +80,40 @@ En lugar de estar en el Mercadona, estoy en un PEAJE!!!!
 
     - Si el banco no contesta: Me voy con mi coche / No me dejan salir?
         - Y si soy una ambulancia que lleva a un tio con un infarto? Me dejan salir?
+
+En una comunicación asíncrona, me quedo a la espera o no? Lo cierto es que un poquito si!
+                              Servidor de Whatsapp
+    Emisor  -- [whatsapp] --> Sistema de mensajería --> Destinatario
+      YO √                                                MI MADRE
+         ^
+         Que el servidor de whatsapp lo tiene. Y entonces es cuando yo me puedo quedar tranquilo
+
+En el mundo de la informática hay muchos servidores de mensajería: Kafka, RabbitMQ, ActiveMQ.
+
+Os dije ayer también.... que en ocasiones, para comunicaciones SINCRONAS también uso sistemas de mensajería ASINCRONCRONOS!
+
+Imaginad que no voy a hacer nada... no me muevo de la silla hasta que mi madre me conteste a mi pregunta: SINCRONA!
+Si a mi madre la contacto por llamada de teléfono, qué pasa si no me contesta? Llamar de nuevo!
+Y si no lo coge? Llamar de nuevo! Y así 40 veces.. que hartura!!!
+
+También puedo optar por el uso de un sistema de mensajería asíncrono: Whatsapp!
+Mando el mensaje... el servidor de whatsapp me dice que ok... Y yo no me muevo de la pantalla del móvil hasta que mi madre me conteste... pero de que me he liberado? De estar llamando 40 veces!
+
+Llevaros esto al mundo de la informática:
+
+        Programa ------>
+        Programa ------> [ COLA ] Servidor
+        Programa ------>
+              le pide algo
+
+Y el servidor tiene una determinada capacidad X de trabajo (es capaz de asumir cierta carga de trabajo por unidad de tiempo)
+Y en un momento dado dado, el servidor no contesta porque está petao!
+Y qué hago yo? Volver a llamar!
+Y no contesta .. y vuelvo a llamar!
+
+Qué es lo que estoy consiguiendo? Saturar más aún al servidor!
+
+El procedimiento asíncrono ME GARANTIZA LA ENTREGA DEL MENSAJE!
+Ya se procesará cuando sea.. y yo a lo mejor ESTOY A LA ESPERA !
+
+Eso de "GARANTIZA" es un poco relativo... porque si el sistema de mensajería se cae... jodidos estamos! Lo que pasa es que este tipo de herramientas suelen ser muy muy robustas.
