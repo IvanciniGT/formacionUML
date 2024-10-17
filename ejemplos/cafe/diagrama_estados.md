@@ -11,7 +11,7 @@ state decidir_tipo_limpieza <<choice>>
 
 state Limpieza {
     [*] --> decidir_tipo_limpieza
-    decidir_tipo_limpieza --> rapida: [ cafes % 10 != 0 ]
+    decidir_tipo_limpieza --> rapida: [ cafes % 10 != 0 <br/> and ultima > NOW - 1h]
     decidir_tipo_limpieza --> profunda: [ cafes % 10 == 0 <br/> or ultima < NOW - 1h]
     rapida --> [*]
     profunda --> [*]: /ultima = NOW
